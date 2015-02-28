@@ -6,7 +6,7 @@
 #    By: niccheva <niccheva@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/02/24 18:13:06 by niccheva          #+#    #+#              #
-#    Updated: 2015/02/24 18:24:33 by niccheva         ###   ########.fr        #
+#    Updated: 2015/02/28 23:47:03 by niccheva         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -25,7 +25,12 @@ SRCD = srcs/
 
 OBJD = objs/
 
-SRC = ft_bzero.s
+SRC =	ft_bzero.s					\
+		ft_isalpha.s				\
+		ft_isalnum.s				\
+		ft_isascii.s				\
+		ft_isdigit.s				\
+		ft_isprint.s
 
 OBJ = $(patsubst %.s, $(OBJD)%.o, $(SRC))
 

@@ -6,7 +6,7 @@
 #    By: niccheva <niccheva@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/02/24 18:13:06 by niccheva          #+#    #+#              #
-#    Updated: 2015/03/04 14:03:21 by niccheva         ###   ########.fr        #
+#    Updated: 2015/03/04 14:20:45 by niccheva         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -32,8 +32,10 @@ SRC =	ft_bzero.s					\
 		ft_isascii.s				\
 		ft_isdigit.s				\
 		ft_isprint.s				\
+		ft_max.s					\
 		ft_memcpy.s					\
 		ft_memset.s					\
+		ft_min.s					\
 		ft_puts.s					\
 		ft_strcat.s					\
 		ft_strdup.s					\

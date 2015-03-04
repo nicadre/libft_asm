@@ -14,8 +14,10 @@ extern "C" {
 	size_t	ft_strlen(const char *s);
 	char *	ft_strcat(char * s1, const char * s2);
 	int		ft_puts(const char *s);
+	int		ft_max(int a, int b);
 	void *	ft_memset(void *b, int c, size_t len);
 	void *	ft_memcpy(void *dst, const void *src, size_t n);
+	int		ft_min(int a, int b);
 	char *	ft_strdup(const char *s1);
 	void	ft_cat(int fd);
 	char *	ft_strchr(const char *s, int c);
@@ -222,73 +224,25 @@ void	test_cat( void ) {
 	std::cout << std::endl;
 }
 
-// void	test_strchr( void ) {
-// 	std::cout << "##### strchr #####" << std::endl;
-// 	std::cout << "#" << std::endl;
-// 	std::cout << "# ft_strchr(\"Hello world\", 'l') : " << ft_strchr("Hello world", 'l') << std::endl;
-// 	std::cout << "# ft_strchr(\"Hello world\", '\\0') : " << ft_strchr("Hello world", '\0') << std::endl;
-// 	std::cout << "# ft_strchr(\"Hello world\", 'z') : " << ft_strchr("Hello world", 'z') << std::endl;
-// 	std::cout << "#" << std::endl;
-// 	std::cout << std::endl;
-// }
+void	test_max(void)
+{
+	std::cout << "##### max #####" << std::endl;
+	std::cout << "#" << std::endl;
+	std::cout << "ft_max(1, 2): " << ft_max(1, 2) << std::endl;
+	std::cout << "ft_max(2, 1): " << ft_max(2, 1) << std::endl;
+	std::cout << "#" << std::endl;
+	std::cout << std::endl;
+}
 
-// void	test_strrchr( void ) {
-// 	std::cout << "##### strrchr #####" << std::endl;
-// 	std::cout << "#" << std::endl;
-// 	std::cout << "# ft_strrchr(\"Hello world\", 'l') : " << ft_strrchr("Hello world", 'l') << std::endl;
-// 	std::cout << "# ft_strrchr(\"Hello world\", '\\0') : " << ft_strrchr("Hello world", '\0') << std::endl;
-// 	std::cout << "# ft_strrchr(\"Hello world\", 'H') : " << ft_strrchr("Hello world", 'H') << std::endl;
-// 	std::cout << "# ft_strrchr(\"Hello world\", 'z') : " << ft_strrchr("Hello world", 'z') << std::endl;
-// 	std::cout << "# ft_strrchr(\"Hello world\", ' ') : (" << ft_strrchr("Hello world", ' ') << ")" << std::endl;
-// 	std::cout << "#" << std::endl;
-// 	std::cout << std::endl;
-// }
-
-// void	test_strjoin( void ) {
-// 	std::string	text1("Hello");
-// 	std::string	text2(" world");
-
-// 	std::cout << "##### strjoin #####" << std::endl;
-// 	std::cout << "#" << std::endl;
-// 	std::cout << "# ft_strjoin(\"" << text1 << "\", \"" << text2 << "\") : " << ft_strjoin(text1.c_str(), text2.c_str()) << std::endl;
-// 	std::cout << "#" << std::endl;
-// 	std::cout << std::endl;
-// }
-
-// void	test_strsub( void ) {
-// 	std::string	text("Hey! Salut toi!");
-
-// 	std::cout << "##### strsub #####" << std::endl;
-// 	std::cout << "#" << std::endl;
-// 	std::cout << "# ft_strsub(\"" << text << "\", 5, 5) : (" << ft_strsub(text.c_str(), 5, 5) << ")" << std::endl;
-// 	std::cout << "#" << std::endl;
-// 	std::cout << std::endl;
-// }
-
-// void	test_memcmp( void ) {
-// 	std::string	text1("Hey! Salut toi!");
-// 	std::string	text2("Hey! Bonjour toi!");
-// 	std::string	text3("Hey! salut toi!");
-
-// 	std::cout << "##### memcmp #####" << std::endl;
-// 	std::cout << "#" << std::endl;
-// 	std::cout << "# memcmp(\"" << text1 << "\", \"" << text2 << "\", 5)    : (";
-// 	std::cout << memcmp(text1.c_str(), text2.c_str(), 5) << ")" << std::endl;
-// 	std::cout << "# ft_memcmp(\"" << text1 << "\", \"" << text2 << "\", 5) : (";
-// 	std::cout << ft_memcmp(text1.c_str(), text2.c_str(), 5) << ")" << std::endl;
-// 	std::cout << "#" << std::endl;
-// 	std::cout << "# memcmp(\"" << text1 << "\", \"" << text2 << "\", 8)    : (";
-// 	std::cout << memcmp(text1.c_str(), text2.c_str(), 8) << ")" << std::endl;
-// 	std::cout << "# ft_memcmp(\"" << text1 << "\", \"" << text2 << "\", 8) : (";
-// 	std::cout << ft_memcmp(text1.c_str(), text2.c_str(), 8) << ")" << std::endl;
-// 	std::cout << "#" << std::endl;
-// 	std::cout << "# memcmp(\"" << text1 << "\", \"" << text3 << "\", 8)    : (";
-// 	std::cout << memcmp(text1.c_str(), text3.c_str(), 8) << ")" << std::endl;
-// 	std::cout << "# ft_memcmp(\"" << text1 << "\", \"" << text3 << "\", 8) : (";
-// 	std::cout << ft_memcmp(text1.c_str(), text3.c_str(), 8) << ")" << std::endl;
-// 	std::cout << "#" << std::endl;
-// 	std::cout << std::endl;
-// }
+void	test_min(void)
+{
+	std::cout << "##### min #####" << std::endl;
+	std::cout << "#" << std::endl;
+	std::cout << "ft_min(1, 2): " << ft_min(1, 2) << std::endl;
+	std::cout << "ft_min(2, 1): " << ft_min(2, 1) << std::endl;
+	std::cout << "#" << std::endl;
+	std::cout << std::endl;
+}
 
 int		main() {
 	test_isdigit();
@@ -306,10 +260,7 @@ int		main() {
 	test_memcpy();
 	test_strdup();
 	test_cat();
-	// test_strchr();
-	// test_strrchr();
-	// test_strjoin();
-	// test_strsub();
-	// test_memcmp();
+	test_max();
+	test_min();
 	return (0);
 }

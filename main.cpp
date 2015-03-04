@@ -20,11 +20,9 @@ extern "C" {
 	int		ft_min(int a, int b);
 	char *	ft_strdup(const char *s1);
 	void	ft_cat(int fd);
-	char *	ft_strchr(const char *s, int c);
-	char *	ft_strrchr(const char *s, int c);
-	char *	ft_strjoin(const char *s1, const char *s2);
-	char *	ft_strsub(const char *s, unsigned int start, size_t len);
-	int		ft_memcmp(const void *s1, const void *s2, size_t n);
+	int		ft_strcmp(const char *a, const char *b);
+	int		ft_strncmp(const char *a, const char *b, int size);
+	void	ft_strclr(char *s);
 }
 
 void	test_isdigit( void ) {
@@ -244,6 +242,38 @@ void	test_min(void)
 	std::cout << std::endl;
 }
 
+void	test_strcmp(void)
+{
+	std::cout << "##### strcmp #####" << std::endl;
+	std::cout << "#" << std::endl;
+	std::cout << "ft_strcmp(\"Hello\", \"Hella\"): " << ft_strcmp("Hello", "Hella") << std::endl;
+	std::cout << "o - a = " << 'o' - 'a' << std::endl;
+	std::cout << "#" << std::endl;
+	std::cout << std::endl;
+}
+
+void	test_strncmp(void)
+{
+	std::cout << "##### strncmp #####" << std::endl;
+	std::cout << "#" << std::endl;
+	std::cout << "ft_strncmp(\"Hello\", \"Hella\", 2): " << ft_strncmp("Hello", "Hella", 2) << std::endl;
+	std::cout << "#" << std::endl;
+	std::cout << std::endl;
+}
+
+void	test_strclr( void ) {
+	std::string		text("Hello world");
+
+	std::cout << "##### strclr #####" << std::endl;
+	std::cout << "#" << std::endl;
+	std::cout << "# text = (" << text << ")" << std::endl;
+	std::cout << "# ft_strclr(text)" << std::endl;
+	ft_strclr(const_cast<char *>(text.c_str()));
+	std::cout << "# text = (" << text << ")" << std::endl;
+	std::cout << "#" << std::endl;
+	std::cout << std::endl;
+}
+
 int		main() {
 	test_isdigit();
 	test_isalpha();
@@ -262,5 +292,8 @@ int		main() {
 	test_cat();
 	test_max();
 	test_min();
+	test_strcmp();
+	test_strncmp();
+	test_strclr();
 	return (0);
 }
